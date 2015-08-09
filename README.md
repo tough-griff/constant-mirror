@@ -1,4 +1,4 @@
-# constant-mirror
+# constant-mirror [![npm](https://img.shields.io/npm/v/constant-mirror.svg)](https://www.npmjs.com/package/constant-mirror) [![npm](https://img.shields.io/npm/dm/constant-mirror.svg)](https://www.npmjs.com/package/constant-mirror)
 > A simple tool for creating objects with keys mirrored as values. Inspired by React's keyMirror.
 
 ## Install
@@ -12,7 +12,6 @@ npm install --save constant-mirror
 import constantMirror from 'constant-mirror';
 // or ES5
 var constantMirror = require('constant-mirror');
-
 
 constantMirror('HELLO', 'WORLD');
 // => { HELLO: 'HELLO', WORLD: 'WORLD' }
