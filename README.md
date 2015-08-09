@@ -18,4 +18,4 @@ constantMirror('HELLO', 'WORLD');
 ```
 
 ## License
-MIT ©️ [Griffin Yourick](https://github.com/tough-griff)
+MIT © [Griffin Yourick](https://github.com/tough-griff)
