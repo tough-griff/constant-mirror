@@ -1,0 +1,26 @@
+{
+  "name": "constant-mirror",
+  "version": "1.0.0",
+  "description": "A simple tool for creating objects with keys mirrored as values. Inspired by React's keyMirror.",
+  "keywords": [
+    "constants",
+    "keyMirror",
+    "key-mirror"
+  ],
+  "repository": "tough-griff/constant-mirror",
+  "author": "Griffin Yourick <gryphon92@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "prepublish": "babel --stage=0 src/index.js -o index.js",
+    "test": "mocha --compilers js:babel/register"
+  },
+  "devDependencies": {
+    "babel": "5.x",
+    "expect.js": "*",
+    "mocha": "*"
+  }
+}
