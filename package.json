@@ -16,10 +16,11 @@
   ],
   "scripts": {
     "prepublish": "babel --stage=0 src/index.js -o index.js",
+    "pretest": "babel --stage=0 src/index.js -o index.js",
     "test": "mocha --compilers js:babel/register"
   },
   "devDependencies": {
-    "babel": "5.x",
+    "babel": "^5.8.21",
     "expect.js": "*",
     "mocha": "*"
   }

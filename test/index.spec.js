@@ -7,8 +7,15 @@ describe('constantMirror', () => {
     expect(constantMirror).to.be.a('function');
   });
 
-  it('creates a mirrored hash from a list of strings', () => {
+  it('creates a mirrored object from a list of strings', () => {
     expect(constantMirror('HELLO', 'WORLD')).to.eql({
+      HELLO: 'HELLO',
+      WORLD: 'WORLD'
+    });
+  });
+
+  it('does not include false-y values in the object', () => {
+    expect(constantMirror('HELLO', 'WORLD', null, undefined)).to.eql({
       HELLO: 'HELLO',
       WORLD: 'WORLD'
     });
