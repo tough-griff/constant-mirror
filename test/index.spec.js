@@ -1,6 +1,6 @@
 import expect from 'expect.js';
 
-import constantMirror from '..';
+import constantMirror from '../src';
 
 describe('constantMirror', () => {
   it('exports a function', () => {
