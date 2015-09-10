@@ -16,9 +16,7 @@ function constantMirror() {
   }
 
   return constants.reduce(function (obj, constant) {
-    if (!constant) return obj;
-
-    return _extends({}, obj, _defineProperty({}, constant, constant));
+    return constant ? _extends({}, obj, _defineProperty({}, constant, constant)) : obj;
   }, {});
 }
 
