@@ -17,9 +17,14 @@
   "scripts": {
     "build": "babel src --out-dir=lib",
     "clean": "rimraf coverage lib",
-    "prepublish": "npm run clean && npm run build",
     "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha",
-    "test": "mocha --compilers=js:babel/register"
+    "test:watch": "npm run test -- --watch",
+    "test": "mocha --compilers=js:babel/register",
+
+    "preversion": "npm run clean && npm run test:cov",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm run clean",
+    "prepublish": "npm run clean && npm run build"
   },
   "devDependencies": {
     "babel": "^5.8.23",
