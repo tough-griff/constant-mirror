@@ -10,19 +10,22 @@
   "repository": "tough-griff/constant-mirror",
   "author": "Griffin Yourick <gryphon92@gmail.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "index.js"
+    "lib/index.js"
   ],
   "scripts": {
-    "coverage": "istanbul cover node_modules/.bin/_mocha -- --compilers=js:babel/register",
-    "prepublish": "babel --stage=0 src/index.js -o index.js",
+    "build": "babel src --out-dir=lib",
+    "clean": "rimraf coverage lib",
+    "prepublish": "npm run clean && npm run build",
+    "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha",
     "test": "mocha --compilers=js:babel/register"
   },
   "devDependencies": {
     "babel": "^5.8.23",
-    "expect.js": "*",
-    "istanbul": "^0.3.19",
-    "mocha": "*"
+    "expect.js": "^0.3.1",
+    "isparta": "^3.0.4",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.4.3"
   }
 }
