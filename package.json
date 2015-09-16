@@ -12,7 +12,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "files": [
-    "lib/index.js"
+    "lib/"
   ],
   "scripts": {
     "build": "babel src --out-dir=lib",
