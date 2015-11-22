@@ -1,6 +1,6 @@
 {
   "name": "constant-mirror",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple tool for creating objects with keys mirrored as values. Inspired by React's keyMirror.",
   "keywords": [
     "constants",
