@@ -22,7 +22,7 @@
     "test": "mocha --compilers=js:babel-core/register",
     "preversion": "npm run clean && npm run test:cov",
     "version": "npm run build",
-    "postversion": "git push && git push --tags && npm run clean",
+    "postversion": "npm run clean && git push && git push --tags",
     "prepublish": "npm run clean && npm run build"
   },
   "devDependencies": {
