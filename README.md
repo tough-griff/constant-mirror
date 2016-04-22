@@ -11,10 +11,21 @@ npm install --save constant-mirror
 // ES6
 import constantMirror from 'constant-mirror';
 // or ES5
-var constantMirror = require('constant-mirror');
+var constantMirror = require('constant-mirror').default;
 
 constantMirror('HELLO', 'WORLD');
 // => { HELLO: 'HELLO', WORLD: 'WORLD' }
+```
+
+#### Symbol Mirror
+```js
+// ES6
+import { symbolMirror } from 'constant-mirror';
+// or ES5
+var symbolMirror = require('constant-mirror').symbolMirror;
+
+symbolMirror('HELLO', 'WORLD');
+// => { HELLO: Symbol(HELLO), WORLD: Symbol(WORLD) }
 ```
 
 ## License
