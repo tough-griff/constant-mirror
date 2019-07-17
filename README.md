@@ -20,9 +20,9 @@ mirror('HELLO', 'WORLD');
 #### Symbol Mirror
 ```js
 // ES6
-import mirror from 'constant-mirror/symbol';
+import mirror from 'constant-mirror/lib/symbol';
 // or ES5
-var mirror = require('constant-mirror/symbol');
+var mirror = require('constant-mirror/lib/symbol');
 
 mirror('HELLO', 'WORLD');
 // => { HELLO: Symbol(HELLO), WORLD: Symbol(WORLD) }
