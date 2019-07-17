@@ -1,18 +1,18 @@
-import symbolMirror from './symbolMirror';
+import mirror from './symbol';
 
 it('exports a function', () => {
-  expect(symbolMirror).toBeInstanceOf(Function);
+  expect(mirror).toBeInstanceOf(Function);
 });
 
 it('creates an object from a list of strings with symbols for values', () => {
-  expect(symbolMirror('HELLO', 'WORLD')).toEqual({
+  expect(mirror('HELLO', 'WORLD')).toStrictEqual({
     HELLO: Symbol.for('HELLO'),
     WORLD: Symbol.for('WORLD'),
   });
 });
 
 it('does not include false-y values in the object', () => {
-  expect(symbolMirror('HELLO', 'WORLD', null, undefined)).toEqual({
+  expect(mirror('HELLO', 'WORLD', null, undefined)).toStrictEqual({
     HELLO: Symbol.for('HELLO'),
     WORLD: Symbol.for('WORLD'),
   });

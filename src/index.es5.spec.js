@@ -1,4 +1,4 @@
-import mirror from '.';
+const mirror = require('.');
 
 it('exports a function', () => {
   expect(mirror).toBeInstanceOf(Function);

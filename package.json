@@ -21,11 +21,11 @@
     "prebuild": "npm run clean",
     "build": "babel src --out-dir=lib --ignore=\"src/**/*.spec.js\"",
     "clean": "rimraf coverage lib",
-    "test": "jest",
-    "preversion": "npm run clean && npm test -- --coverage",
+    "test": "jest --coverage",
+    "preversion": "npm test",
     "version": "npm run build",
-    "postversion": "npm run clean && git push && git push --tags",
-    "prepublish": "npm run clean && npm run build"
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
